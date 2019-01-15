@@ -1,0 +1,26 @@
+<html>
+
+<title>CSP Programming Lab: JavaScript</title>
+</head>
+<body onload = "init();">
+  <script>
+  function init(){
+  document.getElementByID("textOutput").innerHTML = "Enter your name and click the button";
+  }
+  function clickButton(){
+  var name = document.getElementByID("textEntry").value;
+  document.getElementByID("textOutput").innerHTML = "Hello" + name + "!";
+  }
+  </script>
+  <head>
+<h1>CSP Programming Lab: JavaScript</h1>
+<div id="textOutput">Text Output Area</div>
+
+
+<p>Text Entry Field</p>
+<textarea id="textEntry"></textarea>
+
+<p>Button Control</p>
+<button id="myButton" onclick="clickButton();">Click me</button>
+</body>
+</html>

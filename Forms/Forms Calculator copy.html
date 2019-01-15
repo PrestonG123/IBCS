@@ -1,0 +1,56 @@
+
+<html>
+<head>
+  <h1>Calculator</h1>
+</head>
+<body>
+
+  <textarea id="num1"></textarea>
+  <textarea id="operation"></textarea>
+  <textarea id="num2"></textarea>
+
+  <p id="answerText">Answer Will Appear Here</p>
+  <button onclick="returnAnswer()">Calculate</button>
+</body>
+<script>
+  function returnAnswer(){
+    var num1 = document.getElementById("num1").value
+    var num2 = document.getElementById("num2").value
+    var value = document.getElementById("operation").innerHTML
+    var output;
+
+    function add(num1, num2){
+    return num1 + num2;
+    }
+    function subtract(num1, num2){
+    return num1 - num2;
+    }
+    function multiply(num1, num2){
+    return num1 + num2;
+    }
+    function divide(num1, num2){
+    return num1 / num2;
+    }
+
+    if(value == "+"){
+      var output = add(num1, num2);
+      document.getElementbyId("answerText").innerHTML = output;
+}
+    elseif(value == "-"){
+      var output = subtract(num1, num2);
+      document.getElementbyId("answerText").innerHTML = output;
+}
+    elseif(value == "*"){
+      var output = multiply(num1, num2);
+      document.getElementbyId("answerText").innerHTML = output;
+}
+    elseif(value == "/"){
+      var output = divide(num1, num2);
+      document.getElementbyId("answerText").innerHTML = output;
+}
+    else{
+      alert("Please Select an Operation");
+    }
+}
+  </script>
+</html>

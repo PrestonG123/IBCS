@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<h1>Enter Your Name</h1>
+	</head>
+	<body>
+		<textarea id="ta"></textarea>
+		<button onclick="getName()">Click me</button>
+		<p id="textout"></p>
+
+		<script>
+		function getName(){
+			var name = document.getElementById("ta").value;
+			document.getElementById("textout").innerHTML = greet(name);
+		}
+		function greet(name){
+			var greeting = "Hello" + name + "!";
+			document.write(greeting);
+		}
+		</script>
+	</body>
+</html>
