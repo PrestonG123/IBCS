@@ -1,0 +1,33 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h1 id="h1">Header Text</h1>
+		<p id="p1">Paragraph Text</p>
+
+		<h2 id="h2">Header Text</h2>
+		<p id="p2">Paragraph Text</p>
+		
+		<h1 id="h3">Header Text</h1>
+		<p id="p3">Paragraph Text</p>
+
+		<button onclick="callFunction()">click me!</button>
+		<button onclick="callFunction2()">click me!</button>
+		<button onclick="callFunction3()">click me!</button>
+			<script>
+				function callFunction(){
+				document.getElementById("h1").innerHTML = "HTML"
+				document.getElementById("p1").innerHTML = "Hypertext Markup Language";
+			}
+				function callFunction2(){
+				document.getElementById("h2").innerHTML = "CSS"
+				document.getElementById("p2").innerHTML = "Cascading Style Sheets";
+			}
+				function callFunction3(){
+				document.getElementById("h3").innerHTML = "JS"
+				document.getElementById("p3").innerHTML = "Javascript";
+			}
+			</script>
+
+	</body>
+</html>

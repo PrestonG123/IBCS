@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script>
+		var languages = ["Markup", "Uses tags to define elements within a document; easily readable syntax",
+		"High Level", "Allows programs to execute regardless of what hardware they run on",
+		"Low Level", "Programs written in this type of language can only run on certain hardware",
+		"Compiled", "Must be translated to machine code (compiled) in order to run",
+		"Interpreted", "Language which does not require a compiler",
+		"Style Sheet", "Supplements code by providing fonts, layouts, and other aesthetic options"]
+		function changeLanguage(type, definition){
+			document.getElementById("h1").innerHTML = languages[type];
+			document.getElementById("p1").innerHTML = languages[definition];
+		}
+
+		</script>
+	</head>
+	<body>
+		<h1 id="h1">Types of Computer Languages</h1>
+		<p id="p1">Click a Type Below</p>
+				<span onclick="changeLanguage(0,1)">Markup</span> -||-
+				<span onclick="changeLanguage(2,3)">High Level</span> -||-
+				<span onclick="changeLanguage(4,5)">Low Level</span> -||-
+				<span onclick="changeLanguage(6,7)">Compiled</span> -||-
+				<span onclick="changeLanguage(8,9)">Interpreted</span> -||-
+				<span onclick="changeLanguage(10,11)">Style Sheet</span>
+
+	</body>
+</html>

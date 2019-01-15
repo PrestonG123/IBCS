@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script>
+		var languages = ["Arabic", "Marhabaan Bialaelam",
+		"English", "Hello World",
+		"Portuguese", "Ola Mundo",
+		"Japanese", "Konnichiwa Sekai",
+		"Italian", "Olla Mondo"]
+		function changeLanguage(lang, words){
+			document.getElementById("h1").innerHTML = languages[lang];
+			document.getElementById("p1").innerHTML = languages[words];
+		}
+
+		</script>
+	</head>
+	<body>
+		<h1 id="h1">Multi-lingual Hello World</h1>
+		<p id="p1">Click a Language Below</p>
+				<span onclick="changeLanguage(0,1)">Arabic</span> -||-
+				<span onclick="changeLanguage(2,3)">English</span> -||-
+				<span onclick="changeLanguage(4,5)">Portuguese</span> -||-
+				<span onclick="changeLanguage(6,7)">Japanese</span> -||-
+				<span onclick="changeLanguage(8,9)">Italian</span>
+
+	</body>
+</html>
