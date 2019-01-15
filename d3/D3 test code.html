@@ -1,0 +1,37 @@
+
+<html>
+<head><script type="text/javascript" src="d3.v4.js"></script>
+</head>
+<body>
+<script>
+//generates 3 rectangles of random size and position
+var dataArray = [10,10,10];
+
+var svg = d3.select("body").append("svg").attr("height","100%").attr("width","100%");
+
+svg.selectAll("rect")
+      .data(dataArray)
+      .enter().append("rect")
+                .attr("height", function(d){return d * Math.random(1, 10); })
+                .attr("width", function(d){return d * Math.random(1, 5); })
+                .attr("fill", "blue")
+                .attr("x",function(d){return d * Math.random(1, 5); })
+                .attr("y",function(d){return d * Math.random(1, 5); });
+
+var dataArray = [200, 200, 200];
+
+var svg = d3.select("body").append("svg").attr("height","1080px").attr("width","1920px");
+
+svg.selectAll("ellipse")
+  .data(dataArray)
+  .enter().append("ellipse")
+    .attr("cx",Math.random(100, 500))
+    .attr("cy",Math.random(100, 500))
+    .attr("rx",Math.random(100, 500))
+    .attr("ry",Math.random(100, 500))
+    .attr("fill","red");
+
+
+</script>
+</body>
+</html>
