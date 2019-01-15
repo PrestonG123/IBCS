@@ -1,0 +1,61 @@
+<html>
+<head>
+<h1>Map of SBISD High Schools</h1>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+
+</head>
+<body>
+
+<div id="mapid" style="width: 600px; height: 400px;"></div>
+<script>
+
+	var mymap = L.map('mapid').setView([29.788, -95.540], 13);
+
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(mymap);
+
+var marker1 = L.marker([29.811, -95.547]).addTo(mymap);
+marker1.bindPopup("<b>Spring Woods High School</b><br>Address: 2045 Gessner Rd.</br>Student Population: 2216</br>Mascot: Tiger").openPopup();
+
+var marker2 = L.marker([29.775, -95.604]).addTo(mymap);
+marker2.bindPopup("<b>Stratford High School</b><br>Address: 14555 Fern Dr.</br>Student Population: 2141</br>Mascot: Spartan").openPopup();
+
+var marker3 = L.marker([29.817, -95.532]).addTo(mymap);
+marker3.bindPopup("<b>Northbrook High School</b><br>Address: 1 Raider Cir.</br>Student Population: 2332</br>Mascot: Raider").openPopup();
+
+var marker4 = L.marker([29.780, -95.524]).addTo(mymap);
+marker4.bindPopup("<b>Memorial High School</b><br>Address: 935 Echo Ln.</br>Student Population: 2650</br>Mascot: Mustang").openPopup();
+
+var marker5 = L.marker([29.781, -95.583]).addTo(mymap);
+marker5.bindPopup("<b>Westchester Academy for International Studies</b><br>Address: 901 Yorkchester Dr.</br>Student Population: 1014</br>Mascot: Wildcat").openPopup();
+
+var polygon = L.polygon([
+    [29.848, -95.524],
+    [29.834, -95.605],
+    [29.785, -95.602],
+		[29.783, -95.620],
+		[29.764, -95.625],
+		[29.748, -95.520],
+		[29.796, -95.452]
+]).addTo(mymap);
+
+polygon.bindPopup("<b>Spring Branch Independent School District</b><br>*Approximate zoning area");
+
+</script>
+
+
+
+</body>
+</html>
