@@ -1,0 +1,19 @@
+<html>
+<head><script type="text/javascript" src="paper-full.js"></script>
+<script type="text/paperscript" canvas="myCanvas">
+//flattens a circle into a polygon with a random number of sides
+var path = new Path.Circle({
+	center: [100, 100],
+	radius: 45
+});
+path.strokeColor = "black";
+path.strokeWidth = 2
+path.selected = true;
+
+var copy = path.clone();
+copy.position.x += 150;
+copy.flatten(Math.random(1,10000));
+</script>
+</head>
+<body><canvas id="myCanvas" resize></canvas></body>
+</html>
